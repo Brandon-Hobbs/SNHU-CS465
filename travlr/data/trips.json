@@ -1,17 +1,32 @@
 {
-   "1": {
-        "name": "Gale Reef",
-        "image": "reef1.jpg",
-        "description": "<p> BTH Gale Reef Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. <p>Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam convallis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper vitae laoreet. "
+    "1": {
+      "code": "GALR210214",
+      "name": "Gale Reef",
+      "length": "4 nights / 5 days",
+      "start": "2023-02-14T08:00:00Z",
+      "resort": "Emerald Bay, 3.5 stars",
+      "perPerson": "799.00",
+      "image": "reef1.jpg",
+      "description": "<p>BTH at GalesReef..... sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. Fusce at pretium felis."
     },
     "2": {
-        "name": "Dawson's Reef",
-        "image": "reef2.jpg",
-        "description": "<p>BTH Dawson's Reef Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. <p>Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam convallis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper vitae laoreet. "
+      "code": "DWAR210315",
+      "name": "Dawson's Reef",
+      "length": "4 nights / 5 days",
+      "start": "2023-03-15T08:00:00Z",
+      "resort": "Blue Lagoon, 4 stars",
+      "perPerson": "1199.00",
+      "image": "reef2.jpg",
+      "description": "<p>BTH at Dawson's Reef.... integer magna leo, posuere et dignissim vitae, porttitor at odio. Pellentesque a metus nec magna placerat volutpat. Nunc nisi mi, elementum sit amet aliquet quis, tristique quis nisl. Curabitur odio lacus, blandit ut hendrerit."
     },
     "3": {
-        "name": "Lawrence's Reef",
-        "image": "reef3.jpg",
-        "description": "<p>BTH Lawrence's Reef Sed et augue lorem. In sit amet placerat arcu. Mauris volutpat ipsum ac justo mollis vel vestibulum orci gravida. Vestibulum sit amet porttitor odio. Nulla facilisi. <p>Fusce at pretium felis. Sed consequat libero ut turpis venenatis ut aliquam risus semper. Etiam convallis mi vel risus pretium sodales. Etiam nunc lorem ullamcorper vitae laoreet. "
+      "code": "CLAR210621",
+      "name": "Claire's Reef",
+      "length": "4 nights / 5 days",
+      "start": "2023-06-21T08:00:00Z",
+      "resort": "Coral Sands, 5 stars",
+      "perPerson": "1999.00",
+      "image": "reef3.jpg",
+      "description": "<p>BTH At Claire's Reef..... donec sed felis risus. Nulla facilisi. Donec a orci tellus, et auctor odio. Fusce ac orci nibh, quis semper arcu. Cras orci neque, euismod et accumsan ac, sagittis molestie lorem. Proin odio sapien, elementum at tempor non."
     }
-}
+  }
