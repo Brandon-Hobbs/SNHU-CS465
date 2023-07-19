@@ -19,14 +19,15 @@ export class EditTripComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // retrieve stashed tripId
+    // retrieve tripId
     let tripCode = localStorage.getItem("tripCode");
     if (!tripCode) {
-      alert("Something wrong, couldn't find where I stashed tripCode!");
+      alert("Something went wrong, couldn't find tripCode!");
       this.router.navigate([""]);
       return;
     }
     console.log("EditTripComponent#onInit found tripCode " + tripCode);
+
     // initialize form
     this.editForm = this.formBuilder.group({
       _id: [],
@@ -39,26 +40,25 @@ export class EditTripComponent implements OnInit {
       image: ["", Validators.required],
       description: ["", Validators.required],
     });
-    console.log(
-      "EditTripComponent#onInit calling TripDataService#getTrip('" +
-        tripCode +
-        "')"
+    console.log("EditTripComponent#onInit calling TripDataService#getTrip('" + tripCode + "')"
     );
 
     this.tripService.getTrip(tripCode).then((data) => {
       console.log(data);
-      // Don't use editForm.setValue() as it will throw console error
       this.editForm.patchValue(data[0]);
     });
   }
   onSubmit() {
     this.submitted = true;
     if (this.editForm.valid) {
-      this.tripService.updateTrip(this.editForm.value)
-        .then((data) => {
+      this.tripService.updateTrip(this.editForm.value).then((data) => {
           console.log(data);
           this.router.navigate([""]);
       });
     }
+  }
+  // get the form short name to access the form fields
+  get f() {
+    return this.editForm.controls;
   }
 }

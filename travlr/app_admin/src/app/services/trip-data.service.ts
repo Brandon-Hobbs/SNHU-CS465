@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
-
 import { Trip } from '../models/trips';
 
 @Injectable()
@@ -41,7 +40,7 @@ export class TripDataService {
     console.log("Inside TripDataService#updateTrip");
     console.log(formData);
     return this.http
-      .put(this.tripUrl + formData.code, formData)
+      .put(`${this.apiBaseUrl}trips`, formData)
       .toPromise()
       .then((response) => response.json() as Trip[])
       .catch(this.handleError);

@@ -3,11 +3,16 @@ const router = express.Router();
 
 const tripsController = require("../controllers/trips");
 
+//route for adding
 router.route("/trips")
     .get(tripsController.tripsList)
-    .put(tripsController.tripsUpdateTrip)
     .post(tripsController.tripsAddTrip);
 
-router.route("/trips/:tripCode").get(tripsController.tripsFindByCode);
+//route for updating
+router.route("/trips:tripCode")
+    .get(tripsController.tripsList)
+    .put(tripsController.tripsUpdateTrip);
+
+//router.route("/trips/:tripCode").get(tripsController.tripsFindByCode);
 
 module.exports = router;
