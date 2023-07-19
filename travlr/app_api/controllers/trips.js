@@ -77,6 +77,7 @@ const tripsAddTrip = async (req, res) => {
 
 //method to update the trips in the DB
 const tripsUpdateTrip = async (req, res) => {
+  console.log(">>tripsUpdateTrip in API");
   console.log(req.body);
   
   Model.findOneAndUpdate(
