@@ -49,6 +49,9 @@ const tripsFindByCode = async (req, res) => {
 
 //add the trip from the POST command
 const tripsAddTrip = async (req, res) => {
+  console.log(">>tripsAddTrip in API");
+  console.log(req.body);
+  
     Model.create(
         {
             code: req.body.code,
