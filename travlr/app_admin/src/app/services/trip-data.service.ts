@@ -40,7 +40,7 @@ export class TripDataService {
     console.log("Inside TripDataService#updateTrip");
     console.log(formData);
     return this.http    
-      .put(this.tripUrl + formData.code, formData)
+      .put(`${this.apiBaseUrl}trips/` + formData.code, formData)
       .toPromise()
       .then((response) => response.json() as Trip[])
       .catch(this.handleError);
