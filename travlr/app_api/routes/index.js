@@ -9,10 +9,10 @@ router.route("/trips")
     .post(tripsController.tripsAddTrip);
 
 //route for updating
-router.route("/trips/trips:tripCode")
-    .get(tripsController.tripsList)
-    .put(tripsController.tripsUpdateTrip);
+ router.route("/trips/:tripCode")
+     .get(tripsController.tripsFindByCode)
+     .put(tripsController.tripsUpdateTrip);
 
-router.route("/trips/:tripCode").get(tripsController.tripsFindByCode);
+//router.route("/trips/:tripCode").get(tripsController.tripsFindByCode);
 
 module.exports = router;

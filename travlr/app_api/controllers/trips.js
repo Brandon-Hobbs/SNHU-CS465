@@ -26,6 +26,8 @@ const tripsList = async(req, res) => {
 
 //get trips by code
 const tripsFindByCode = async (req, res) => {
+  console.log(">>tripsFindByCode in API");
+  console.log(req.body);
     Model
         .find({code: req.params.tripCode})
         .exec((err, trip) => {
