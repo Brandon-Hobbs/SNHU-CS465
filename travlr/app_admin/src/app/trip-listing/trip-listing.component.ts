@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { TripDataService } from 'src/app/services/trip-data.service';
 import { Trip } from 'src/app/models/trips';
+import { AuthenticationService } from '../services/authentication.service';
 //import { trips } from '/Users/BTH/source/GIt Repos/travlr/app_admin/src/app/data/trips';
 
 @Component({
@@ -18,7 +19,8 @@ export class TripListingComponent implements OnInit {
 
   constructor(
     private tripDataService: TripDataService,
-    private router: Router
+    private router: Router,
+    private authenticationService: AuthenticationService
     ) {}
 
   private addTrip(): void{
@@ -32,6 +34,10 @@ export class TripListingComponent implements OnInit {
       this.message = foundTrips.length > 0 ? "" : "No trips found";
       this.trips = foundTrips;
     });
+  }
+
+  public isLoggedIn(): boolean {
+    return this.authenticationService.isLoggedIn();
   }
 
   ngOnInit(): void {
