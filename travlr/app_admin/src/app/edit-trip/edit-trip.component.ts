@@ -48,14 +48,14 @@ export class EditTripComponent implements OnInit {
       this.editForm.patchValue(data[0]);
     });
   }
-  
+
   onSubmit() {
     this.submitted = true;
     if (this.editForm.valid) {
       console.log("EditTripComponent#onInit calling onSubmit");
       this.tripService.updateTrip(this.editForm.value).then((data) => {
           console.log(data);
-          this.router.navigate([""]);
+          this.router.navigate(["list-trips"]); //return to the list
       });
     }
   }
