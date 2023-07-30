@@ -48,6 +48,7 @@ export class EditTripComponent implements OnInit {
       this.editForm.patchValue(data[0]);
     });
   }
+  
   onSubmit() {
     this.submitted = true;
     if (this.editForm.valid) {
